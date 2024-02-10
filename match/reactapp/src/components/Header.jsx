@@ -3,7 +3,7 @@ import ashesilogo from "./icons/ashesilogo.png";
 import Sidemenu from "./Sidemenu";
 import HorizontalList from "./HorizontalList";
 
-const Header = ({ Page }) => {
+const Header = ({ Page, SubHeader }) => {
   return (
     <div>
       <div
@@ -29,10 +29,10 @@ const Header = ({ Page }) => {
             backgroundColor: "white",
             zIndex: "1002",
             left: "0",
-          }}
-        >
+          }}>
           <img src={ashesilogo} alt="Ashesi Logo" style={{ height: "35px" }} />
         </div>
+        {SubHeader}
       </div>
 
       <HorizontalList
@@ -47,8 +47,7 @@ const Header = ({ Page }) => {
               minHeight: "100vh",
               marginLeft: "-120px",
               transform: "translateY(10vh)",
-            }}
-          >
+            }}>
             {Page}
           </div>,
         ]}
